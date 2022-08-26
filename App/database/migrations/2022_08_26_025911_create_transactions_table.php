@@ -18,10 +18,9 @@ class CreateTransactionsTable extends Migration
             $table->string('transaction_id');
             $table->string('status');
             $table->string('payment_type');
-            $table->string('cms_vendor');
-            $table->int('product_id');
-            $table->float('amount', 12);
-            $table->dateTime('purchase_date');
+            $table->float('cms_vendor', 12);
+            $table->integer('product_id');
+            $table->date('purchase_date');
             $table->timestamps();
         });
     }

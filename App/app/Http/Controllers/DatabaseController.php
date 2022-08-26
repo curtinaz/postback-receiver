@@ -9,7 +9,7 @@ class DatabaseController extends Controller
 {
     public function pepper(Request $req)
     {
-        Transaction::createOrUpdate(
+        Transaction::updateOrCreate(
             [
                 "transaction_id" => $req->transaction
             ],
